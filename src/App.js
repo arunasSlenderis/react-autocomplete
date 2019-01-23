@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Autocomplete from './components/Autocomplete';
 
 class App extends Component {
+  setCurrentItem(item) {
+    console.log(item);
+  }
   render() {
+    const options = { 
+      clearable: true,
+      placeholder: 'Search...',
+      searchBy: 'name', 
+      uniqueKey: 'id', 
+      searchRoute: 'https://jsonplaceholder.typicode.com/users' 
+    };
+    // const currentItem = { id: 1, name: 'First user' };
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='App'>
+        <Autocomplete options={options} setCurrentItem={this.setCurrentItem.bind(this)} />
       </div>
     );
   }

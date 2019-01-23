@@ -1,0 +1,19 @@
+.results-list {
+  position: absolute;
+  list-style-type: none;
+  border: 1px solid #eaedf0;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+.results-list-item {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.results-list-item:hover {
+  background: #e8e8e8;
+}
